@@ -31,7 +31,7 @@ The Clinical module of the EHR provides the functionality for patient registrati
 
 To access the RAAD EHR landing page, use the EHR URL [uat.raad.moh.gov.so](https://uat.raad.moh.gov.so).
 
-![RAAD EHR Landing Page](images/LandingPage.png)
+![RAAD EHR Landing Page](images/Landing Page.png)
 
 Then click on the Clinical Services Icon
 
