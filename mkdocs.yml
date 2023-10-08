@@ -24,13 +24,13 @@ theme:
        toggle:
          icon: material/toggle-switch-off-outline 
          name: Switch to dark mode
-       primary: blue
+       primary: bluegrey
        accent: lime 
      - scheme: slate 
        toggle:
         icon: material/toggle-switch
         name: Switch to light mode    
-       primary: blue
+       primary: bluegrey
        accent: lime
 extra:
   social:
