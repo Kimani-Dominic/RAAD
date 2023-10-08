@@ -588,4 +588,10 @@ Previously generated reports or queued reports can be accessed  on the ‘My rep
 * The user can submit the summary information to the HMIS platform after review.
 
 
+![HMIS Reports ](images/image59.png)
 
+![HMIS Reports ](images/image61.png)
+
+![HMIS Reports ](images/image62.png)
+
+![HMIS Reports ](images/image63.png)
