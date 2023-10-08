@@ -1,11 +1,13 @@
 site_name: RAAD EHR User Guide
-site_url: https://dhis2.org/
+site_url: https://uat.raad.gov.so
 nav:
   - Home: index.md
-  - User Guide: user_guide.md
+  - User Guide: user-guide.md
+  - User Support: user-support.md
   - About: about.md
 theme:
    name: material
+   logo: images/raad-logo.png
    features:
       - navigation.tabs
       - navigation.sections
@@ -22,12 +24,30 @@ theme:
        toggle:
          icon: material/toggle-switch-off-outline 
          name: Switch to dark mode
-       primary: teal
-       accent: purple 
+       primary: blue
+       accent: lime 
      - scheme: slate 
        toggle:
         icon: material/toggle-switch
         name: Switch to light mode    
-       primary: teal
+       primary: blue
        accent: lime
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Nomadilab
+    - icon: fontawesome/brands/linkedin
+      link: https://twitter.com/Nomadilab
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+
+
 
