@@ -27,7 +27,8 @@ The RAAD EMR system includes the following key modules:
 
 
 ## Clinical Service
-RAAD EHR - Clinical Service 
+
+### RAAD EHR - Clinical Service 
 The Clinical module of the EHR provides the functionality for patient registration, clinical and medication management(triage, diagnosis, prescription, observations, Lab orders ), inpatient management, and report generation.
 
 To access the RAAD EHR landing page, use the EHR URL [uat.raad.moh.gov.so](https://uat.raad.moh.gov.so).
