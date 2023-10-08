@@ -61,7 +61,7 @@ On successful login, the system will redirect the user to the Clinical App landi
 
 ![Clinical Service Landing Page After Login](images/ClinicalApps.png)
 
-#### Registration App
+### Registration App
 The patient registration app provides the ability to start and edit a patient record at the health facility. It allows users to search for existing patient records, add new patients, edit existing patient records, start or close a patient visit.
 
 *  It provides a patient search based on name, phone number or village
@@ -138,22 +138,22 @@ To update a patient's details, you can perform a search using one of the followi
 * Once you've made the updates, click the 'Save' button. This action will save the updated details in the system.
 
 
-#### Additional Information
+##### Additional Information
 
 You can add additional information on the last section of the first tab on the registration page which majorly includes the patient’s next of kin contact details, and other additional fields. Note these are optional fields, only the phone number is mandatory.
 
 ![Additional Information Tab ](images/image8.png)
 
-#### Add Relationships (optional)
+##### Add Relationships (optional)
 
 The middle area of the registration page has a ‘Relationships’ section, which upon clicking has a drop-down box with three types of relationships i,e doctor,sibling and parent and you can add the next of kin relationship with the patient. After selecting the relationship, search using the patient name or patient unique identifier to link the relationship. Once you confirm all the details are correctly mapped, save the record. Note the patient record can only be linked to patients or providers already existing in the system.
 
 ![Add Relationshis tab ](images/image7.png)
 
 
-#### Starting A visit and Closing A Visit
+#### Starting and Closing Patient Visit
 
-##### Starting A Visit
+##### Starting Patient Visit
 
 A patient visit encompasses the entire process of a patient's interaction with a healthcare facility, from registration and triage to clinical assessment, treatment, and other encounters. Eg. laboratory, and inpatient etc. A visit type is the categorization or classification of patient visits based on the purpose or nature of the appointment. This is different from one EPHS facility level to another. 
 
@@ -186,7 +186,7 @@ The Start visit types includes:
 
 ![Visits Page ](images/image12.png)
 
-##### Closing A visit
+##### Closing Patient Visit
 Closing a patient visit means the patient won’t be active on the clinical queue or available to receive services. This should be done once a patient visit or patient encounters with the clinicians have been completed. If not closed, the system will automatically close the visits at the end of the day(at midnight).
 
 If the patient has already begun their visit:
@@ -213,7 +213,7 @@ Once the patient visit is closed, the patient won’t be accessible on the clini
 
 
 
-#### Clinical Application
+### Clinical Application
 This is a core module and serves multiple purposes, including viewing the treatment history of existing patients, initiating consultations and treatment for registered patients. It can be conveniently accessed through the 'Clinical' app on the system's landing page.
 
 Additionally, this module facilitates searching, viewing, and editing patient observations, placing lab requests, recording patient diagnoses and conditions, and dispensing medications to patients. It's important to note that the clinical module is specifically designed for patients who currently have an active visit.
