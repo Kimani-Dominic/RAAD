@@ -356,17 +356,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    User Support
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -376,46 +365,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#frequently-asked-questions" class="md-nav__link">
-    Frequently Asked questions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tutorials" class="md-nav__link">
-    Tutorials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contact-information" class="md-nav__link">
-    Contact information
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -456,6 +405,127 @@
 
 
 <h1 id="user-support">User Support</h1>
+<h1 id="deployment">Deployment</h1>
+<h2 id="requirements">Requirements</h2>
+<p>To deploy the RAAD installer, you will need:</p>
+<ul>
+<li>
+<p>A CentOS cloud-based server having at least 4GB of RAM and 20GB of free disk space.</p>
+</li>
+<li>
+<p>The IP address of the CentOS server</p>
+</li>
+<li>
+<p>The username and password for the CentOS server</p>
+</li>
+<li>
+<p>Root privileges on the system</p>
+</li>
+<li>
+<p>The RAAD installer package</p>
+</li>
+<li>
+<p>Chrome or Firefox web browser installed.</p>
+</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>RAAD can be installed with simple steps using the installer package.</p>
+<p>Within the terminal, enter the following command, replacing <strong>username</strong> with the username of the
+remote user and <strong>ip-address</strong> with the IP address or domain name of the remote server.</p>
+<pre><code>ssh [username]@[ip-address]
+
+</code></pre>
+<p>The SSH client attempts to connect to the remote server over port 22 (the default SSH port).</p>
+<p>When you connect with a server for the first time, the SSH client on Windows 10 prompts
+you to check and verify the host key’s fingerprint. This is normal, and results in output
+similar to:</p>
+<p><em>The authenticity of host ‘example.com (<strong>93.184.216.34</strong>)’ can&#39;t be established. ECDSA key
+fingerprint is <strong>SHA256:d029f87e3d80f8fd9b1be67c7426b4cc1ff47b4a9d0a84</strong>. Are you sure you
+want to continue connecting (yes/no)?</em></p>
+<p>Accept the prompt by entering <strong>y or yes</strong>, which results in a one-time warning that is like:</p>
+<p><strong><em>Warning: Permanently added &#39;example&#39; (ECDSA) to the list of known hosts</em>.</strong></p>
+<p>Once you have been successfully connected, your terminal will be using the remote shell environment for
+the server. Your command prompt will show the username and hostname configured to the
+server.</p>
+<p>You can now run any commands that you have available on that server. This includes many of
+the basic Linux commands, such as ls, cd, rm, and those covered in Using the Terminal guide. Getting to
+know these commands will help you navigate around your server.</p>
+<ul>
+<li>Install curl command to fetch installer with the following command:</li>
+</ul>
+<pre><code>sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install curl
+</code></pre>
+<ul>
+<li>Finally, all you need to get up and running is to execute the following:</li>
+</ul>
+<pre><code>curl -k https://uat.raad.moh.gov.so/2gv7o-l2e4q/download/install-raad.sh | sudo bash
+</code></pre>
+<ul>
+<li>When prompted with a github token like the following:</li>
+</ul>
+<p><em>Password for &#39;https://GitHubUser@github.com&#39;:</em></p>
+<p><strong>Enter token and press enter</strong>.</p>
+<h2 id="upgrading-raad">Upgrading RAAD</h2>
+<ul>
+<li>RAAD can be upgraded to the newest version using the following simple steps.Update using
+raad-update command</li>
+</ul>
+<pre><code>sudo bash /opt/ehr_docker/bin/raad-update
+</code></pre>
+<ul>
+<li>When prompted with a github token like the following:</li>
+</ul>
+<p><em>Password for &#39;https://GitHubUser@github.com&#39;:</em></p>
+<p><strong>Enter token and press enter</strong></p>
+<h2 id="initialization">Initialization</h2>
+<p>The first time you install RAAD, it will take about 5 to 10 minutes to initialize. It creates some necessary
+files and folders and activates all its modules. After the first initialization, the software will start up much
+faster.</p>
+<h3 id="post-installation-steps">​Post-Installation Steps</h3>
+<p>Once RAAD is installed, you will need to complete the following steps:</p>
+<ul>
+<li><strong><em>Configure RAAD by the following steps</em></strong>.</li>
+</ul>
+<p>Goto /raad/configuration/ where you will be greeted with this page.</p>
+<p><img alt="RAAD configuration page " src="../images/image91.png" /></p>
+<p>After you’ve filled in all the necessary information marked with red astericks hit <strong>save</strong> and <strong>continue</strong></p>
+<p><img alt="Raad configuration page " src="../images/image92.png" /></p>
+<ul>
+<li><strong><em>Rebuild search index  Note wait for initialization to finish</em></strong>.</li>
+</ul>
+<p>To do that first go to <a href="https://&lt;machine-ip&gt;/openmrs/">https://&lt;machine-ip&gt;/openmrs/</a>   And login with the
+credentials as to gain access to the application section. Then navigate to <strong>administration</strong>.</p>
+<p><img alt="OpenMRS Landing page " src="../images/image65.png" /></p>
+<p><img alt="OpenMRS Landing page " src="../images/image93.png" /></p>
+<p>Click <strong>Rebuild Search Index</strong> Button.</p>
+<p><img alt="OpenMRS Landing page " src="../images/image94.png" /></p>
+<p>Upon clicking one will be directed to the following page</p>
+<p><img alt="OpenMRS Landing page " src="../images/image95.png" /></p>
+<h2 id="access-the-application">Access the Application</h2>
+<p>Open your browser (Chrome or Firefox) and access the following applications replace <strong>&lt;machine-ip&gt;</strong>
+with <strong>localhost</strong> if you are running RAAD on a local machine. And use the following credentials:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Application</th>
+<th style="text-align: center;">URL</th>
+<th style="text-align: right;">Credentials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RAAD EMR UI</td>
+<td style="text-align: center;">[https://&lt;machine-ip&gt;/home ]</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">RAAD Lab</td>
+<td style="text-align: center;">[https://&lt;machine-ip&gt;/openelis ]</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Clinical Service Login Page" src="../images/LoginPage.png" /></p>
 <h2 id="frequently-asked-questions">Frequently Asked questions</h2>
 <h2 id="tutorials">Tutorials</h2>
 <h2 id="contact-information">Contact information</h2>
